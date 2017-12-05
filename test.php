@@ -8,4 +8,15 @@
 
 	echo date('Y-m-d H:i:s', filemtime(PATH.'index2.php')) .'<br/ >';
 	echo date('Y-m-d H:i:s', filemtime(PATH_TPL.'index.tpl'));
+
+
+	$c_data = '{$nam_e}23123131';
+	function regMatch($c_data){
+		$regExp = '/\{\$([\w]+)\}/';
+		$reg = "/2+/";
+		echo '123<br/>';
+		echo preg_match($regExp,$c_data);
+	}
+
+	regMatch($c_data);
 ?>

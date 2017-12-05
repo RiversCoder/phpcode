@@ -8,6 +8,6 @@
 	</style>
 </head>
 <body>
-	index.tpl 内容ss 这个模板页面更改了哟
+	一个{$name}
 </body>
 </html>
