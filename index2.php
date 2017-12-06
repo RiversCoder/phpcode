@@ -1,24 +1,20 @@
 <?php
-	header('Content-type:text/html;charset=utf8');
-	define('PATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
-	define('PATH_TPL',dirname(__FILE__).DIRECTORY_SEPARATOR.'templates/');
-	define('PATH_TPLC',dirname(__FILE__).DIRECTORY_SEPARATOR.'templates_c/');
-	define('CACHE',dirname(__FILE__).DIRECTORY_SEPARATOR.'cache/');
+	
+	require_once __dir__.DIRECTORY_SEPARATOR.'template.inc.php';		
+	
 
-	function __autoload($_classname){
-		require_once PATH.'includes/'.$_classname.'.class.php';
-	}
-
-	$tpl = new Templates();
+	global $tpl;
 
 	//创建一个普通变量
 	$nameValue = '我是一只小小鸟! 大家好';
 	
 	//注入变量
-	$tpl->assign('name',$nameValue);
+	/*$tpl->assign('name',$nameValue);
+	$tpl->assign('year','23');
+	$tpl->assign('array',array('叮','嘀','哒','咯','嘈','哧','噗'));*/
+	//$tpl->assign('path',PATH.'new.php');
 
 	//载入tpl文件
 	$tpl->display("index.tpl");
-
 
 ?>

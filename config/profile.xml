@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<taglib>
+		<name>webname</name>
+		<value>CMS系统</value>
+	</taglib>
+	<taglib>
+		<name>page</name>
+		<value>10</value>
+	</taglib>	
+</root>
+
