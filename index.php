@@ -1,6 +1,6 @@
 <?php
 	
-	require_once __dir__.DIRECTORY_SEPARATOR.'template.inc.php';		
+	require_once __dir__.DIRECTORY_SEPARATOR.'init.inc.php';		
 	
 
 	global $tpl;
