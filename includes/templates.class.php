@@ -73,7 +73,7 @@
 				if(filemtime($tpl_c) >= filemtime($tpl_path) && filemtime($tpl_c) <= filemtime($cache))
 				{	
 					//直接载入缓存文件
-					echo '直接载入缓存文件';
+					//echo '直接载入缓存文件';
 					include $cache;
 					return;
 				}
@@ -97,6 +97,35 @@
 				$cacheFile = ob_get_contents();
 				file_put_contents($cache, $cacheFile);
 			}
+		}
+
+		
+		//分离的模块创建编译文件 不创建缓存文件
+		public function create($_file)
+		{
+			//设置模板的路径
+			$tpl_path = PATH_TPL.$_file;
+
+			//检车模板文件是否存在
+			if(!file_exists($tpl_path))
+			{
+				exit('模板文件不存在');
+			}
+
+			//生成编译文件路径
+			$tpl_c =  PATH_TPLC.md5($_file).'.'.$_file.'.php';
+
+			if(!file_exists($tpl_c) || filemtime($tpl_c) < filemtime($tpl_path) || filemtime($tpl_c) < filemtime(PATH.'includes/parser.class.php')){	
+
+				//编译成php文件 				
+				$parser = new Parser($tpl_path);
+				//$parser->regMatch();	
+				$parser->compile($tpl_c);
+			}
+
+			//引入最后编译完成的php文件
+			include $tpl_c;
+
 		}
 
 	}

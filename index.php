@@ -14,7 +14,8 @@
 	$tpl->assign('array',array('叮','嘀','哒','咯','嘈','哧','噗'));*/
 	//$tpl->assign('path',PATH.'new.php');
 
+	$tpl->assign('title','我是标题，我将被植入');
+
 	//载入tpl文件
 	$tpl->display("index.tpl");
-
 ?>

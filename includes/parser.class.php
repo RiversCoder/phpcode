@@ -118,12 +118,13 @@
 		private function regMatchInclude()
 		{	
 			
-			$regExpInclude = '/\{include\s+file=[\"|\']{1}([\w\.\-]+)[\"|\']{1}\}/';
+			$regExpInclude = '/\{include\s+file=[\"|\']{1}([\w\.\-\/]+)[\"|\']{1}\}/';
 
 			//匹配{include file="text.php"}
 			if(preg_match($regExpInclude,$this->c_data,$files))
 			{	
 
+				//echo PATH.$files[1];
 				//判断文件是否存在
 				if(file_exists(PATH.$files[1]))
 				{
