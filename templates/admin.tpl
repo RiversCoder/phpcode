@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +7,6 @@
 <body>
 	CMS管理者后台内容
 </body>
-=======
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,5 +21,4 @@
 		<frame src="main.php" noresize="true" />
 	</frameset>
 </frameset>
->>>>>>> 12/13
 </html>
