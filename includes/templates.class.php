@@ -12,7 +12,15 @@
 
 		//构造方法
 		function __construct()
+<<<<<<< HEAD
 		{
+=======
+		{	
+			//echo PATH.'<br/>';
+			//echo PATH_TPL.'<br/>';
+			//echo PATH_TPLC.'<br/>';
+			//echo CACHE.'<br/>';
+>>>>>>> 12/13
 			//检测定义的绝对路径是否存在
 			if(!is_dir(PATH) || !is_dir(PATH_TPL) || !is_dir(PATH_TPLC) || !is_dir(CACHE)){
 				exit('路径不正确, 退出');
